@@ -1,0 +1,45 @@
+public class Aims {
+	private static void sumTest(Order order, DigitalVideoDisc... dvd) {
+		float sum = 0;
+		for (DigitalVideoDisc digitalVideoDisc : dvd) {
+			sum += digitalVideoDisc.getCost();
+		}
+		System.out.println("" + sum + " " + order.totalCost());
+		assert sum==order.totalCost() : "Wrong total";
+		System.out.println("Correct sum!");
+	}
+	
+	public static void main(String[] args) {
+		
+		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King");
+		dvd1.setCategory("Animation");
+		dvd1.setCost(19.95f);
+		dvd1.setDirector("Roger Allers");
+		dvd1.setLength(87);
+		
+		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars");
+		dvd2.setCategory("Science Fiction");
+		dvd2.setCost(24.95f);
+		dvd2.setDirector("George Lucas");
+		dvd2.setLength(124);
+		
+		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin");
+		dvd3.setCategory("Animation");
+		dvd3.setCost(18.99f);
+		dvd3.setDirector("John Musker");
+		dvd3.setLength(90);
+		
+		DigitalVideoDisc dvd4 = new DigitalVideoDisc("Jumanji");
+		dvd4.setCategory("Science Fiction");
+		dvd4.setCost(28.99f);
+		dvd4.setDirector("The Rock");
+		dvd4.setLength(90);
+		
+		DigitalVideoDisc dvd5 = new DigitalVideoDisc("Cinderella");
+		dvd5.setCategory("Animation");
+		dvd5.setCost(12.08f);
+		
+
+	}
+	
+}

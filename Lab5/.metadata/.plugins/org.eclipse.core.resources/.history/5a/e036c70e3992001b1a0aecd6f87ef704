@@ -1,0 +1,21 @@
+public class DateTest {
+
+	public static void main(String[] args) {
+		//Date Format: dd/MM/yyyy
+		MyDate[] d = new MyDate[4];
+		d[0] = new MyDate("March","sixteenth","twenty hundred");
+		d[1] = new MyDate("December","twenty-second	","twenty thirteen");
+		d[2] = new MyDate("January","twenty-fourth","twenty twenty-three");
+		d[3] = new MyDate("February","twenty-fiveth","twenty twenty");
+		
+		
+		assert DateUtils.compare(d[0],d[1]) > 0 : "Wrong compare";
+		assert DateUtils.compare(d[2],d[3]) == 0 : "Wrong compare";
+		DateUtils.sort(d);
+		
+		for (MyDate myDate : d) {
+			myDate.print();
+			myDate.printShort();
+		}
+	}
+}
