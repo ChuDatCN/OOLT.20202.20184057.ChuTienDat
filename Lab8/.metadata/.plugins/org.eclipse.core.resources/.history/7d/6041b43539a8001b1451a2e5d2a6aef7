@@ -1,0 +1,6 @@
+
+public interface Compareable<Media> {
+	public int compareTo(media Media) {
+		
+	}
+}
